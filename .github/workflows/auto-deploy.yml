@@ -146,7 +146,7 @@ jobs:
           # delete old full.m3u, tt.m3u before merge
           rm -f ${{ secrets.NAME_THTHETHAO }}
           rm -f ${{ secrets.NAME_TTTHETHAO }}
-          mkdir -p m3ufiles
+          mkdir -p src
           ls -lh
 
           if [ -f nguyenban.m3u ]; then
@@ -252,23 +252,6 @@ jobs:
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
           
-          # if [ -f new_vatv.m3u ]; then
-          #   echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          #   cat new_vatv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
-          #   echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          # fi
-
-          # if [ -f new_pktv.m3u ]; then
-          #   echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          #   cat new_pktv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
-          #   echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          # fi
-
-          # if [ -f new_bongda.m3u ]; then
-          #   echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          #   cat new_bongda.m3u >> ${{ secrets.NAME_TTTHETHAO }}
-          #   echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          # fi
 
           cat ${{ secrets.NAME_THETHAO }} > ${{ secrets.NAME_THTHETHAO }}
           echo " " >> ${{ secrets.NAME_THTHETHAO }}
