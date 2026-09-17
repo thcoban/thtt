@@ -49,6 +49,9 @@ jobs:
           
       - name: Download file via curl
         run: |
+          echo "before"
+          ls -lh
+          
           curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o ${{ secrets.NAME_THETHAO }} ${{ secrets.URL_PRIVATE_FILES_REPO }}/${{ secrets.NAME_THETHAO }}  & 
           curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o xoilacztv.py ${{ secrets.URL_PRIVATE_FILES_REPO }}/python/xoilacztv.py  & 
           curl -s -k -H "Authorization: token ${{ secrets.MY_SECRET_PAT }}" -L -o json2m3u.py ${{ secrets.URL_PRIVATE_FILES_REPO }}/python/json2m3u.py & 
@@ -81,10 +84,12 @@ jobs:
           # curl -s -k -L -o antlivetv.m3u https://thcoban.github.io/ththethao/antlivetv.m3u  &
           
           wait
+          echo "after"
           ls -lh
 
       - name: Download, get & convert links to M3U files
         run: |
+          ls -lh
           # if [ -f testproxies.py ]; then
           #   python testproxies.py etc/proxies.txt &
           # fi
