@@ -180,8 +180,6 @@ jobs:
 
           echo "Last updated: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > lastupdated.txt
 
-          # [ -f bongda.m3u ] && cp bongda.m3u src/
-          
           [ -f ${{ secrets.NAME_THTHETHAO }} ] && cp ${{ secrets.NAME_THTHETHAO }} src/
           [ -f ${{ secrets.NAME_THETHAO }} ] && cp ${{ secrets.NAME_THETHAO }} src/
           [ -f ${{ secrets.NAME_TTTHETHAO }} ] && cp ${{ secrets.NAME_TTTHETHAO }} src/
@@ -207,13 +205,13 @@ jobs:
           # [ -f s8tv.m3u ] && cp s8tv.m3u src/
           # [ -f gavangtv.m3u ] && cp gavangtv.m3u src/
           # [ -f nguyenban.m3u ] && cp nguyenban.m3u src/
-          
           # [ -f socolivetv.m3u ] && cp socolivetv.m3u src/
           
-          [ -f keys.json ] && cp keys.json src/
           # [ -f ttthethao.json ] && cp ttthethao.json src/         
           
-          # ls -lh src/
+          [ -f keys.json ] && cp keys.json src/
+          
+          ls -lh src/
 
           
       - name: Setup Pages
