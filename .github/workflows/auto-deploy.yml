@@ -130,9 +130,9 @@ jobs:
             cat s8tv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
-          if [ -f saokev.m3u ]; then
+          if [ -f saoketv.m3u ]; then
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-            cat saokev.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            cat saoketv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
           if [ -f xoilacztv.m3u ]; then
