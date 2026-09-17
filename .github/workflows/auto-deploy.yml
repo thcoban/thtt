@@ -250,7 +250,7 @@ jobs:
         run: |
           git config --local user.name "thcoban [bot]"
           git add lastupdated.txt
-          git add etc/testing/host.txt
+          # git add etc/testing/host.txt
 
           echo "checking any changes"
           if git diff --staged --quiet; then
