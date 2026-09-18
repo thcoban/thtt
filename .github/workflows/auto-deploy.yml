@@ -80,7 +80,7 @@ jobs:
           fi
           
           if [ -f apisports.py ]; then
-            python apisports.py socolive socolivetv.m3u &
+            python apisports.py sutbong sutbongtv.m3u &
             python apisports.py khandai khandaitv.m3u &
 
             python apisports.py chuoichien chuoichientv.m3u &
@@ -110,6 +110,11 @@ jobs:
             cat vuasancotv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
+          if [ -f khandaitv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat khandaitv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
           if [ -f chuoichientv.m3u ]; then
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
             cat chuoichientv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
@@ -120,9 +125,9 @@ jobs:
             cat giovangtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
-          if [ -f khandaitv.m3u ]; then
+          if [ -f biaomtv.m3u ]; then
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-            cat khandaitv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            cat biaomtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
           if [ -f s8tv.m3u ]; then
@@ -140,15 +145,9 @@ jobs:
             cat xoilacztv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi         
-          if [ -f biaomtv.m3u ]; then
+          if [ -f gavang33tv.m3u ]; then
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-            cat biaomtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
-            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          fi
-
-          if [ -f gavangtv.m3u ]; then
-            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-            cat gavangtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            cat gavang33tv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
           if [ -f colatv.m3u ]; then
@@ -156,28 +155,22 @@ jobs:
             cat colatv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
-          if [ -f nguyenban.m3u ]; then
+          if [ -f sutbongtv.m3u ]; then
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-            cat nguyenban.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            cat sutbongtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
+          if [ -f gavangtv.m3u ]; then
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+            cat gavangtv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
+            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
+          fi
+
           if [ -f nauxoitv.m3u ]; then
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
             cat nauxoitv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
-          if [ -f gavang33tv.m3u ]; then
-            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-            cat gavang33tv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
-            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          fi
-
-          if [ -f socolivetv.m3u ]; then
-            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-            cat socolivetv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
-            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          fi
-          
 
           cat ${{ secrets.NAME_THETHAO }} > ${{ secrets.NAME_THTHETHAO }}
           echo " " >> ${{ secrets.NAME_THTHETHAO }}
@@ -191,31 +184,6 @@ jobs:
           [ -f ${{ secrets.NAME_THETHAO }} ] && cp ${{ secrets.NAME_THETHAO }} src/
           [ -f ${{ secrets.NAME_TTTHETHAO }} ] && cp ${{ secrets.NAME_TTTHETHAO }} src/
 
-          # keep current xoilacztv.m3u for next use
-          # [ -f xoilacztv.m3u ] && cp xoilacztv.m3u src/
-          # [ -f quechoatv.m3u ] && cp quechoatv.m3u src/
-          # [ -f hoiquantv.m3u ] && cp hoiquantv.m3u src/
-          # [ -f khandaiatv.m3u ] && cp khandaiatv.m3u src/
-          # [ -f xaycontv.m3u ] && cp xaycontv.m3u src/
-          # [ -f colatv.m3u ] && cp colatv.m3u src/
-          # [ -f bugiotv.m3u ] && cp bugiotv.m3u src/
-          # [ -f tamquoctv.m3u ] && cp tamquoctv.m3u src/
-          # [ -f chuoichientv.m3u ] && cp chuoichientv.m3u src/
-          # [ -f cakhiatv.m3u ] && cp cakhiatv.m3u src/
-          # [ -f nauxoitv.m3u ] && cp nauxoitv.m3u src/
-          # [ -f quechoatv.m3u ] && cp quechoatv.m3u src/
-          # [ -f tieulamtv.m3u ] && cp tieulamtv.m3u src/
-          # [ -f luongsontv.m3u ] && cp luongsontv.m3u src/
-          # [ -f chaogatv.m3u ] && cp chaogatv.m3u src/
-          # [ -f vuasancotv.m3u ] && cp vuasancotv.m3u src/
-          # [ -f biaomtv.m3u ] && cp biaomtv.m3u src/
-          # [ -f s8tv.m3u ] && cp s8tv.m3u src/
-          # [ -f gavangtv.m3u ] && cp gavangtv.m3u src/
-          # [ -f nguyenban.m3u ] && cp nguyenban.m3u src/
-          # [ -f socolivetv.m3u ] && cp socolivetv.m3u src/
-          
-          # [ -f ttthethao.json ] && cp ttthethao.json src/         
-          
           [ -f keys.json ] && cp keys.json src/
           
           ls -lh src/
