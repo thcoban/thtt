@@ -168,9 +168,9 @@ jobs:
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
 
-          if [ -f ${{ secrets.NAME_THETHAO }} ]; then
-            cat ${{ secrets.NAME_THETHAO }} > ${{ secrets.NAME_THTHETHAO }}
-          fi 
+          # if [ -f ${{ secrets.NAME_THETHAO }} ]; then
+          #   cat ${{ secrets.NAME_THETHAO }} > ${{ secrets.NAME_THTHETHAO }}
+          # fi 
           echo " " >> ${{ secrets.NAME_THTHETHAO }}
           cat ${{ secrets.NAME_TTTHETHAO }} >> ${{ secrets.NAME_THTHETHAO }}
           echo " " >> ${{ secrets.NAME_THTHETHAO }}
