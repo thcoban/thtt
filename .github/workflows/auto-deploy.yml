@@ -65,30 +65,30 @@ jobs:
           #   python testproxies.py etc/proxies.txt &
           # fi
         
-          if [ -f xoilacztv.py ]; then
-            # will overwrite previous xoilacztv, if the condition matches
-            # python xoilacztv.py https://xoilacz.vip xoilacztv.m3u  & 
-            python xoilacztv.py https://xoilacz.io xoilacztv.m3u  & 
-          fi
+          # if [ -f xoilacztv.py ]; then
+          #   # will overwrite previous xoilacztv, if the condition matches
+          #   # python xoilacztv.py https://xoilacz.vip xoilacztv.m3u  & 
+          #   python xoilacztv.py https://xoilacz.io xoilacztv.m3u  & 
+          # fi
 
-          if [ -f gavangtv.py ]; then
-            python gavangtv.py https://gavanglink.org gavangtv.m3u &
-          fi
+          # if [ -f gavangtv.py ]; then
+          #   python gavangtv.py https://gavanglink.org gavangtv.m3u &
+          # fi
           
-          if [ -f apisports.py ]; then
-            python apisports.py sutbong sutbongtv.m3u &
-            python apisports.py khandai khandaitv.m3u &
-            python apisports.py phalang phalangtv.m3u &
+          # if [ -f apisports.py ]; then
+          #   python apisports.py sutbong sutbongtv.m3u &
+          #   python apisports.py khandai khandaitv.m3u &
+          #   python apisports.py phalang phalangtv.m3u &
 
-            python apisports.py chuoichien chuoichientv.m3u &
-            python apisports.py saoke saoketv.m3u &
-            python apisports.py gavang33 gavang33tv.m3u &
-            python apisports.py giovang giovangtv.m3u &
-            python apisports.py cola colatv.m3u &
-            python apisports.py vuasanco vuasancotv.m3u &
-            python apisports.py biaom biaomtv.m3u &
-            python apisports.py s8tv s8tv.m3u &
-          fi
+          #   python apisports.py chuoichien chuoichientv.m3u &
+          #   python apisports.py saoke saoketv.m3u &
+          #   python apisports.py gavang33 gavang33tv.m3u &
+          #   python apisports.py giovang giovangtv.m3u &
+          #   python apisports.py cola colatv.m3u &
+          #   python apisports.py vuasanco vuasancotv.m3u &
+          #   python apisports.py biaom biaomtv.m3u &
+          #   python apisports.py s8tv s8tv.m3u &
+          # fi
           
           wait
       
@@ -168,12 +168,6 @@ jobs:
             echo " " >> ${{ secrets.NAME_TTTHETHAO }}
           fi
 
-          if [ -f nauxoitv.m3u ]; then
-            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-            cat nauxoitv.m3u >> ${{ secrets.NAME_TTTHETHAO }}
-            echo " " >> ${{ secrets.NAME_TTTHETHAO }}
-          fi
-
           cat ${{ secrets.NAME_THETHAO }} > ${{ secrets.NAME_THTHETHAO }}
           echo " " >> ${{ secrets.NAME_THTHETHAO }}
           cat ${{ secrets.NAME_TTTHETHAO }} >> ${{ secrets.NAME_THTHETHAO }}
@@ -184,7 +178,7 @@ jobs:
 
           [ -f ${{ secrets.NAME_THTHETHAO }} ] && cp ${{ secrets.NAME_THTHETHAO }} src/
           [ -f ${{ secrets.NAME_THETHAO }} ] && cp ${{ secrets.NAME_THETHAO }} src/
-          [ -f ${{ secrets.NAME_TTTHETHAO }} ] && cp ${{ secrets.NAME_TTTHETHAO }} src/
+          # [ -f ${{ secrets.NAME_TTTHETHAO }} ] && cp ${{ secrets.NAME_TTTHETHAO }} src/
 
           [ -f keys.json ] && cp keys.json src/
           
